@@ -1,0 +1,1 @@
+<?phpclass CommAction extends Action {	public function _initialize(){				if(!$_SESSION['adminuser']){			$this->error('正在进入后台登录中心，请稍后。。。',U('/Admin/Login/index'));		}		$this->webuser=C('webuser');		$this->adminuser=session('adminuser');		}	}

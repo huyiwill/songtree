@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="9bd12c87-c105-421e-b3ea-305ad0b1d7c7" name="songtree" url="http://120.26.38.109">
+        <fileTransfer host="120.26.38.109" port="21" rootFolder="/htdocs/www/songtree">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

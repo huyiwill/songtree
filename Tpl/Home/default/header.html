@@ -1,0 +1,40 @@
+<div class="navbg">
+  <div class="container">
+    <!--  导航 -->
+    <div class="x12">
+      <div class="x2"><a href="{$domain}"><img src="{$logo}" alt="{$webname}" width="100%" height="65"/></a></div>
+      <div class="navBar x10">
+        <ul class="nav clearfix">
+          <li id="m1" class="m"><h3><a href="/www/songtree/">首页</a></h3></li>
+          <volist name="menu" id="v1">
+            <li id="m{$i}" class="m"><h3><a href="{$v1.url}">{$v1.catename}</a><i>/</i></h3>
+              <div class="hot"></div>
+              <if condition="$v1['sub']">
+                <ul class="sub">
+                  <volist name="v1['sub']" id="v2">
+                    <if condition="$v2.catename neq '其它'">
+                      <li><a href="{$v2.url}">{$v2.catename}</a></li>
+                    </if>
+                  </volist>
+                  <li><a href="/qita.html">其它</a></li>
+                </ul>
+              </if>
+            </li>
+          </volist>
+        </ul>
+      </div>
+
+      <script type="text/javascript">
+        jQuery(".nav").slide({
+          type         : "menu",
+          titCell      : ".m",
+          targetCell   : ".sub",
+          effect       : "slideDown",
+          delayTime    : 300,
+          triggerTime  : 100,
+          returnDefault: false
+        });
+      </script>
+    </div>
+  </div>
+</div>

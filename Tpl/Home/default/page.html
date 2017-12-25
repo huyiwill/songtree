@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="Content-Language" content="zh-CN" /> 
+	<title>{$title}-{$webtitle}-{$webname}</title> 
+	<meta name="Keywords" content="{$webkey}" /> 
+	<meta name="Description" content="{$webdesc}" />  
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/default/css/pintuer.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/default/css/style.css">
+	<script type="text/javascript" src="__PUBLIC__/default/js/jquery.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/default/js/jquery.SuperSlide.2.1.1.js"></script>
+	<style type="text/css">
+
+	</style>
+</head>
+<body>
+<!-- Banner -->
+<div class="ontainer-layout" >
+<include file=":header" />
+	<div class="x12"><img src="__PUBLIC__/default/images/banner_pic.png" width="100%"></div>
+	<div class="container">
+		<div class="x12 padding">
+				<div class="x12 text-right padding-small">位置：<a href="{$webname}">首页</a>  ><a href="" class="text-green " >{$title}</a></div> 
+				<hr class="x12 hr" />
+		</div>
+		<div class="x12  padding">
+			<div class="x12  margin-large-bottom" >
+				<div class="x12 margin-top grid-big ">
+					<h1 class="x12 padding-small text-green text-center" > {$title}</h1>
+					
+					<span class="x12 padding-small">{$content}</span>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+<include file=":footer" />

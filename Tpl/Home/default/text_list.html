@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Language" content="zh-CN"/>
+  <title>{$title}-{$webtitle}-{$webname}</title>
+  <meta name="Keywords" content="{$webkey}"/>
+  <meta name="Description" content="{$webdesc}"/>
+  <link rel="stylesheet" type="text/css" href="__PUBLIC__/default/css/pintuer.css">
+  <link rel="stylesheet" type="text/css" href="__PUBLIC__/default/css/style.css">
+  <script type="text/javascript" src="__PUBLIC__/default/js/jquery.js"></script>
+  <script type="text/javascript" src="__PUBLIC__/default/js/jquery.SuperSlide.2.1.1.js"></script>
+  <style type="text/css">
+
+  </style>
+</head>
+<body>
+<!-- Banner -->
+<div class="ontainer-layout">
+  <include file=":header"/>
+  <div class="x12"><img src="__PUBLIC__/default/images/banner_pic.png" width="100%"></div>
+  <div class="container">
+    <div class="x12 padding">
+      <div class="x12 text-right padding-small">位置：<a href="{$webname}">首页</a> > <a href=""
+                                                                                    class="text-green">{$title}</a>
+      </div>
+      <hr class="x12 hr"/>
+    </div>
+    <div class="x12  padding">
+      <div class="x12 text-center margin-large-bottom">
+        <div class="x12 margin-top grid-big">
+          <volist name="list" id="vo">
+            <div class="space x12  text-left">
+              <div class="x12    padding-large margin-big-top border-bottom">
+                <a href="{$vo.url}" class=" ">
+                  <div class="x9  border-right border-gray padding-right">
+                    <div class="x2 padding-small">
+                      <img src="{$vo.pic}" class="x12" height="72">
+                    </div>
+                    <div class="x9">
+                      <h2 class="x12 padding-small "
+                          style="width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis; display:block;">
+                        {$vo.name}</h2>
+                      <span class="x12 padding-small ">{$vo.desc}</span>
+                    </div>
+                  </div>
+                  <div class="x3 text-large padding-large-left li_1" style="color: #e0e0e0">
+                    <span class="x6 padding-left">{$vo.time|msubstr=###,5,5}</span>
+                    <span class="x12"></span>
+                    <span class="x6 text-big padding-left">{$vo.time|msubstr=###,0,4}</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </volist>
+        </div>
+        <div class="bottom-xia x12 ">
+          <ul class="pagination">
+            {$page}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--
+    <div class="x12 bg-white">
+      <div class="container">
+        <div class="x12  padding">
+          <div class="x12 text-center margin-large-bottom margin-large-top" >
+            <h1 class="text-main x12 margin-large-top" style="font-size: 30px;">°新闻动态</h1>
+            <h5 class="x12 text-gray margin-big-bottom">News</h5>
+            <div class="x12 margin-top grid-big">
+               <pcwap  cid='3' num="5">
+                <div class="space x12  text-left">
+                  <div class="x12  zdy-bg  padding-large margin-big-top" >
+                    <a href="{$pcwap['url']}" class=" ">
+                      <div class="x9  border-right border-gray padding-right">
+                        <h2 class="x12 padding-small ">{$pcwap['name']}</h2>
+                        <span class="x12 padding-small ">{$pcwap['desc']}</span>
+                      </div>
+                      <div class="x3 text-large padding-large-left li_1" style="color: #e0e0e0">
+                        <span class="x6 padding-left">{$pcwap.time|msubstr=###,5,5}</span>
+                        <span class="x12"></span>
+                        <span class="x6 text-big padding-left">{$pcwap.time|msubstr=###,0,4}</span>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </pcwap >
+
+            </div>
+            <a class="bottom-xia x12 " href="/">
+              <span class="more-img ">MORE</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div> -->
+  <div class="x12 footer_bg ">
+    <div class="container">
+      <div class="x12 bg-white margin-large-top">
+        <div class="padding  x12 ">
+          <div class="x12 padding border ">
+            <div class=" margin x12"></div>
+            <div class="x12 zdy ">
+              <li class=" padding"><h5><a href="/">首页</a><i> /</i></h5></li>
+              <volist name="menu" id="v1">
+                <li class=" padding"><h5><a href="{$v1.url}">{$v1.catename}</a><i> /</i></h5></li>
+              </volist>
+            </div>
+            <div class="x12 text-center">
+              <span class="x12 padding-small">电话：{$fax}</span>
+              <span class="x12 padding-small">邮箱：{$email}</span>
+              <span class="x12 padding-small">手机：{$tel}</span>
+              <span class="x12 padding-small">地址：{$address}</span>
+            </div>
+            <div class=" margin x12"></div>
+          </div>
+        </div>
+      </div>
+      <span class="x12 text-center padding-big text-gray">Copyright© 2017 版权所有：<a href="{$domain}">{$webname}</a> 联系QQ：2468818839</span>
+    </div>
+  </div>
+</div>
+</body>
+</html>

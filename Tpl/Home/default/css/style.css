@@ -1,0 +1,116 @@
+    body{
+  background: url(/Tpl/Home/default/images/bg.png);
+}
+/* banner样式 */
+.slideBox{ width:100%; height:960px; overflow:hidden; position:relative; border:1px solid #ddd;  }
+.slideBox .hd{ height:30px; overflow:hidden; position:absolute; right:5px; bottom:5px; z-index:1; }
+.slideBox .hd ul{ overflow:hidden; zoom:1; float:left; padding: 0px;margin:0px; }
+.slideBox .hd ul li{ float:left;  margin:10px 10px 0 30px;  width:5px; height:5px; text-align:center; background:#fff; 
+  -webkit-transform-origin:0 100%;
+  -moz-transform-origin:0 100%;
+  -o-transform-origin:0 100%;
+  -ms-transform-origin:0 100%;
+  transform-origin:0 100%;
+  -webkit-transform:rotate(-45deg);
+  -moz-transform:rotate(-45deg);
+  -o-transform:rotate(-45deg);
+  -ms-transform:rotate(-45deg);
+  transform:rotate(-45deg);
+
+	cursor:pointer; list-style-type :none; }
+.slideBox .hd ul li.on{ background:#81a849; color:#fff; width:15px; height:15px;}
+.slideBox .bd{ position:relative; height:100%; z-index:0;   }
+.slideBox .bd ul{ padding: 0px;margin:0px;  }
+.slideBox .bd li{ zoom:1; vertical-align:middle; list-style-type :none; }
+.slideBox .bd img{ width:100%; height:960px; display:block;  }
+/* 导航*/
+.navbg{background: rgba(0, 0, 0, 0.04);padding:5px; border-bottom: 1px solid  rgba(0, 0, 0, 0.07);width: 100% }
+.navBar{ position:relative; z-index:1; color:#fff; height:65px;   }
+.nav{ width:100%; margin:0 auto; font-family:"Microsoft YaHei",SimSun,SimHei;  }
+.nav .m{ float:left;  position:relative; border-top:0; border-bottom:0; margin-left:-1px;   }
+.nav a:hover{ text-decoration:none; color:#000;   }
+.nav h3{ float:left;  font-size:100%; font-weight:normal; font-size:16px; height:40px; overflow:hidden;  }
+.nav h3 a{ display:block; color:#000;  padding:0 33px;  vertical-align:top; line-height:60px;  }
+
+.nav .on{ border-color:#81a849;   }
+.nav .on h3 a{ color:#00a850; border-color:#81a849 !important;  }
+.nav .on h3 a:hover{ color:#81a849;   }
+.nav .sub{ display:none; /*默认隐藏*/ width:100%; padding:10px 0;   position:absolute; left:-1px; top:40px; background:#81a849; text-align:center;  }
+.nav .sub li{ vertical-align:middle; }
+.nav .sub li a{ height:auto; line-height:25px; padding:0px 0;  display:block;  color:#fff;   }
+.nav .sub li a:hover{ color:#fff;   }
+.top_bg{
+  background: url(/Tpl/Home/default/images/top_bg.png)no-repeat;
+  width: 100%;
+}
+.footer_bg{
+  background: url(/Tpl/Home/default/images/fonter_bg.png)no-repeat;
+  width: 100%;
+}
+.bottom-xia{
+  max-width: 1240px;
+    margin: 30px auto;
+    width: 98%;
+    text-align: center;
+    height: 40px;
+     position: relative; 
+}
+.bottom-img{
+      background: url(/Tpl/Home/default/images/xia.png);
+    width: 19px;
+    height: 24px;
+    position: absolute;
+    top: 0px;
+    display: inline-block;
+    animation-name: myfirst;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-play-state: running;
+}
+.more-img{
+    background: url(/Tpl/Home/default/images/more.png)no-repeat;
+    width: 57px;
+    height: 57px;
+    display: block;
+    color: #4f8320;
+    font-size: 12px;
+    line-height: 57px;
+    text-align: center;
+    margin: auto;
+    cursor: pointer;
+    margin-bottom: 30px;
+
+}
+@keyframes myfirst
+{
+0%   {top:0px;}
+25%  {top:10px;}
+50%  {top:20px;}
+100% {top:30px;}
+}
+.hr{
+max-width: 1240px;
+    width: 98%;
+    margin: auto;
+    text-align: center;
+    color: #666666;
+    font-size: 14px;
+    line-height: 24px;
+    background: url(/Tpl/Home/default/images/xie_xian.png) repeat-x bottom;
+    padding-bottom: 10px;
+  
+}
+.zdy-bg{background-color: #f8f8f8;
+}
+.zdy-bg:hover{background-color: #81a849;}
+.zdy-bg h2:hover{color: #fff;}
+.zdy-bg span:hover{color: #fff;}
+.li_1{
+      background: url(/Tpl/Home/default/images/li_1.png)no-repeat;
+      background-position: 100% 75% ;
+}
+.zdy {margin:0 30%;width: 100%}
+.zdy li{list-style-type :none ;float:left; }
+.acc{width:200px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis; display:block;float: right;}

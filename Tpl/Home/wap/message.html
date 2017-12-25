@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+  <title>
+    <if condition="$seotitle">{$seotitle}
+      <else/>
+      {$title}
+    </if>
+    -{$webname}
+  </title>
+  <meta name="keywords" content="{$key}">
+  <meta name="description" content="{$desc}">
+  <!--<link rel="stylesheet" type="text/css" href="__PUBLIC__/wap/css/css.css"/>-->
+
+  <if condition="date('w')%2 eq 1">
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/wap/css/css.css"/>
+    <else/>
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/wap/css/css1.css"/>
+  </if>
+
+  <script src="__PUBLIC__/wap/js/jquery.js" type="text/javascript" charset="utf-8"></script>
+  <script src="__PUBLIC__/wap/js/slide.js" type="text/javascript" charset="utf-8"></script>
+  <script src="__PUBLIC__/wap/js/pcwap.js" type="text/javascript" charset="utf-8"></script>
+
+  <link rel="stylesheet" type="text/css" href="__PUBLIC__/default/css/pintuer.css">
+  <link rel="stylesheet" type="text/css" href="__PUBLIC__/default/css/style.css">
+  <script type="text/javascript" src="__PUBLIC__/default/js/jquery.js"></script>
+  <script type="text/javascript" src="__PUBLIC__/default/js/jquery.SuperSlide.2.1.1.js"></script>
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+</head>
+<body>
+
+
+<div class="web980">
+
+  <div class="list_left">
+    <div class="content">
+      <div class="title">
+        <h2>{$title}</h2>
+        <div class="time">
+          <a href="/www/songtree/">首页</a> > {$daohan}
+        </div>
+      </div>
+
+      <div class="x12  padding">
+        <div class="x12  margin-large-bottom">
+          <div class="x12 margin-top grid-big padding-large">
+            <h1 class="x12 padding-small text-green text-center" style="font-size: 30px;">"猪之家"{$title}</h1>
+            <span class="x12 padding-small text-gray text-center ">您好，对{$webname}有任何疑问都可以给我们留言，我们会尽快回复！</span>
+
+            <div class="x12 padding-small">
+              <form method="post" class="form-big form-x " action="__GROUP__/Message/index">
+
+                <div class="form-group">
+                  <label for="title" class="text-big">
+                    <i class="text-red">*</i> 标题</label>
+                  <input type="text" class="input" id="title" name="title" size="50" placeholder="请输入标题"/>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="username" class="text-big">
+                      <i class="text-red">*</i> 姓名</label>
+                    <input type="text" class="input" id="username" name="username" size="50" placeholder="你的真实姓名"/>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="tel" class="text-big">
+                      <i class="text-red"> </i> 电话</label>
+                    <input type="text" class="input" id="tel" name="tel" size="50" placeholder="你的联系电话"/>
+                </div>
+
+                <div class="form-group">
+                    <label for="mail" class="text-big">
+                      <i class="text-red">*</i> 邮箱</label>
+                    <input type="text" class="input" id="mail" name="mail" size="50" placeholder="你的邮箱地址"/>
+                  </div>
+                </div>
+
+                <div class="form-group x6 padding-large-top padding-large-left">
+                  <div class="label ">
+                    <label for="content" class="text-big">
+                      <i class="text-red">*</i> 内容</label>
+                  </div>
+                  <div class="field">
+                  <textarea class="input" rows="5" cols="50" placeholder="请输入留言内容" style="width: 952px;height: 120px; "
+                            name="content" id="content"></textarea>
+                  </div>
+                </div>
+
+                <div class="x12"></div>
+                <div class="form-group x6 padding-large-top padding-large-left">
+                  <div class="label x3">
+                    <label for="code" class="text-big">
+                      <i class="text-red">*</i> 验证码</label>
+                  </div>
+
+                  <div class="field x9">
+                    <input type="text" class="input input-auto x9" id="code" name="code" size="20">
+                    <img class="x3 padding-small" style="height: 44px;width: 85px;" src='__APP__/code.php' id="checkImg"
+                         onclick="fGetCode()"/> <a onclick="fGetCode()" class="padding-small" style="line-height: 80px">
+                    换一张</a>
+                  </div>
+                </div>
+                <div class="x12"></div>
+                <div class="form-group x6 ">
+                  <div class="label ">
+                  </div>
+                  <div class="field">
+                    <button class="button  x4 margin-small bg-main" type="submit">
+                      提交
+                    </button>
+                    <button class="button  x4 margin-small bg-yellow" type="reset">
+                      重置
+                    </button>
+                  </div>
+
+                </div>
+              </form>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <img src="__PUBLIC__/wap/images/1.jpg"/>
+
+
+    </div>
+
+
+  </div>
+
+  <include file=":footer"/>
+
+  <script>
+    function fGetCode(){
+      document.getElementById('checkImg').src = '__APP__/code.php';
+    }
+    $(document).ready(function(){
+      $("form").submit(function(e){
+        if($("input[name='code']").val() == false){
+          $("input[name='code']").focus();
+          return false
+        }
+
+      });
+    });
+
+  </script>
+
+
