@@ -39,7 +39,7 @@
         <?php echo ($content); ?>
       </div>
 
-      <img src="__PUBLIC__/pcwap/images/0.jpg"/>
+      <img src="__PUBLIC__/wap/images/0.jpg"/>
       <div class="lianxi">
 
         <p><span></span><?php echo ($webname); ?></p>
@@ -48,7 +48,7 @@
         <p><span>地址：</span><?php echo ($address); ?></p>
 
       </div>
-      <img src="__PUBLIC__/pcwap/images/1.jpg"/>
+      <img src="__PUBLIC__/wap/images/1.jpg"/>
       <div class="prev">
         <a href="<?php echo ($prev[url]); ?>">上一篇</a>
       </div>

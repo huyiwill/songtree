@@ -27,7 +27,7 @@
       </div>
       <div class="bd">
         <ul>
-          <?php $adlists=M("ads")->where(array('id'=>array(IN,array(1,2,3,4))))->where('isshow=1')->order("id desc")->select();foreach ($adlists as $adlist):?><li><a href="<?php echo ($adlist['adurl']); ?>" target="_blank"><img style="width: 100%;height: 800px;" src="<?php echo ($adlist['adpic']); ?>"/></a></li><?php endforeach ?>
+          <?php $adlists=M("ads")->where(array('id'=>array(IN,array(1,2,3,4))))->where('isshow=1')->order("id desc")->select();foreach ($adlists as $adlist):?><li><a href="<?php echo ($adlist['adurl']); ?>" target="_blank"><img style="width: 100%;height: 660px;margin-top: 80px;" src="<?php echo ($adlist['adpic']); ?>"/></a></li><?php endforeach ?>
         </ul>
       </div>
 

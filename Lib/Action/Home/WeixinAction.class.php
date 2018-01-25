@@ -6,7 +6,7 @@ class WeixinAction extends Action{
 				$signature = htmlspecialchars(addslashes($_GET["signature"]),ENT_QUOTES);
 				$timestamp = htmlspecialchars(addslashes($_GET["timestamp"]),ENT_QUOTES);
 				$nonce = htmlspecialchars(addslashes($_GET["nonce"]),ENT_QUOTES);					
-				$token = 'pcwap';
+				$token = 'huyi123';
 				$tmpArr = array($token, $timestamp, $nonce);
 				sort($tmpArr);
 				$tmpStr = implode( $tmpArr );
@@ -22,7 +22,6 @@ class WeixinAction extends Action{
 	//服务号自定义菜单
 	public function menu(){
 			$appid=M('weixin_appid')->find();
-		
 			header("Expires:Mon,26Jul199705:00:00GMT");
 			header("Pragma:no-cache");
 			//设置编码
@@ -40,8 +39,7 @@ class WeixinAction extends Action{
 				echo 'Errno'.curl_error($chw);
 				}
 				curl_close($chw);			
-			$arr=json_decode($tmpInfo,true);	
-			
+			$arr=json_decode($tmpInfo,true);
 			$post = "https://api.weixin.qq.com/cgi-bin/menu/create?access_token=".$arr['access_token'];	
 					
 			$data = '{"button":[';
